@@ -10,9 +10,9 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <style>
             body{
-                background-image:url("./imag/thunderstorm-3625405__480.jpg");
+                background-image:url("./imag/BK-RDR_2000_2880x1440.webp");
                 background-size:cover;
-                background-position:no-repeat;
+                
                 
             }
             #result{
@@ -46,13 +46,13 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${weather}&appid=5b4bee
        
         temp=Math.round(temp-273.15)
         feels=Math.round(feels-273.15)
-        result.innerHTML=`        <div class="container full w-50 text-center ">
+        result.innerHTML=`        <div class="container full text-center ">
             <h2 style="color:white;font-weight:bold;">${locationName}</h2>
-            <h4 class="cloud" style="opacity:0.6">${clouds}</h4>
-            <h4 class="desc" style="opacity:0.6">${description}</h4>
+            <h6 class="cloud" style="opacity:0.6">${clouds}</h6>
+            <h6 class="desc" style="opacity:0.6">${description}</h6>
             <img src="https://openweathermap.org/img/w/${icon}.png">
             <h1>${temp}<sup>&deg;C</sup></h1>
-            <h2 style="opacity:0.8;font-size:20px;"><span style="font-size:20px; font-weight:bold; opacity:0.8">FEELS LIKE</span> ${feels}<sup>&deg;C</sup></h2>
+            <h6 style="opacity:0.8;font-size:20px;"><span style="font-size:20px; font-weight:bold; opacity:0.8">FEELS LIKE</span> ${feels}<sup>&deg;C</sup></h6>
 `
     }
 </script>
